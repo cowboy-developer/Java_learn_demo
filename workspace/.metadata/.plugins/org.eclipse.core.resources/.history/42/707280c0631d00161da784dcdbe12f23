@@ -1,0 +1,31 @@
+package com.$520it_01;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class AddComDemo {
+	public static void main(String[] args) {
+		//创建一个窗体
+		JFrame frame = new JFrame("Android");
+		//设置窗体的位置和大小    设置在屏幕的正中间    500*300
+		//获取屏幕的大小
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		Dimension size = toolkit.getScreenSize();
+		int width = size.width;
+		int height = size.height;
+		int x = (width - 500) / 2;
+		int y = (height - 300) / 2;
+		
+		//前两个参数指的是屏幕的坐标,后两个是大小
+		frame.setBounds(x, y, 500, 300);
+		//设置默认的关闭动作
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//在窗体中添加组件
+
+		//设置窗体可见
+		frame.setVisible(true);
+	}
+}

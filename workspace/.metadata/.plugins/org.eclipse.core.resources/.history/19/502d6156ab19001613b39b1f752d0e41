@@ -1,0 +1,19 @@
+package com.$520it_05;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+public class BufferedStream {
+	public static void main(String[] args) {
+		byByteStream();
+	}
+
+	private static void byByteStream() throws Exception {
+		//1:先有一个基本流
+		OutputStream out = new FileOutputStream("c:/1.exe");
+		
+	}
+	
+	
+}

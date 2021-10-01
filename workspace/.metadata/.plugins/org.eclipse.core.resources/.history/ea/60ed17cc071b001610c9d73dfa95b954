@@ -1,0 +1,13 @@
+package com.$520it_02;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class ObjectStreamDemo {
+	public static void main(String[] args) throws Exception {
+		//使用对象的输出流
+		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("c:/1.txt"));
+		//写数据
+		out.writeObject(100);
+	}
+}

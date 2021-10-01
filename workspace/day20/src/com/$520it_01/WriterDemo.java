@@ -1,0 +1,24 @@
+package com.$520it_01;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+public class WriterDemo {
+	public static void main(String[] args) throws Exception {
+		//写字符数据
+		Writer writer = new FileWriter("c:/1.txt");
+		//写操作
+		write(writer);
+		//关闭资源时会自动刷新1次
+		//缓冲区满了也会自动刷新
+		writer.close();
+	}
+
+	private static void write(Writer writer) throws Exception {
+		//写数据
+		writer.write("我是大魔王");
+		//字符流的写是写入底层的缓冲区,要把数据写到文件上还需要刷新缓冲区
+		//刷新缓冲区
+//		writer.flush();
+	}
+}

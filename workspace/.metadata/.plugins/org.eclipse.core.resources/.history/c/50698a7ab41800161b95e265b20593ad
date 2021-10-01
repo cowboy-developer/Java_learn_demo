@@ -1,0 +1,10 @@
+package com.$520it_01;
+
+import java.io.File;
+
+public class FileListDemo {
+	public static void main(String[] args) {
+		//获取目录中所有的路径
+		File file = new File("E:/逍遥/day01-走进java");
+	}
+}

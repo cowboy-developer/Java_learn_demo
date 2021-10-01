@@ -1,0 +1,14 @@
+package com.$520it_01;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+public class WriterDemo {
+	public static void main(String[] args) throws Exception {
+		//Ð´×Ö·ûÊý¾Ý
+		Writer writer = new FileWriter("c:/1.txt");
+		//Ð´²Ù×÷
+		write(writer);
+		
+	}
+}

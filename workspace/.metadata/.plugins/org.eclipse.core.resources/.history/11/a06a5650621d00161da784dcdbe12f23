@@ -1,0 +1,15 @@
+package com.$520it_01;
+
+import javax.swing.JFrame;
+
+public class JFrameDemo {
+	public static void main(String[] args) {
+		//创建一个窗体
+		JFrame frame = new JFrame("Android");
+		//设置窗体的位置和大小
+		//前两个参数指的是屏幕的坐标,后两个是大小
+		frame.setBounds(10, 0, 250, 200);
+		//设置窗体可见
+		frame.setVisible(true);
+	}
+}

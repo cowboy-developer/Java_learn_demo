@@ -1,0 +1,10 @@
+package com.$520it_01;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class Demo {
+	public static void main(String[] args) {
+		InputStream is = new FileInputStream("c:/1.txt");
+	}
+}

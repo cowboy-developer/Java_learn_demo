@@ -1,0 +1,11 @@
+package com.$520it_04;
+
+public class TCPServer {
+	public static void main(String[] args) {
+//		1：创建ServerSocket对象
+//		2：????
+//		3：获取输入流读取数据
+//		4：关闭资源（服务端一般不关闭）
+
+	}
+}

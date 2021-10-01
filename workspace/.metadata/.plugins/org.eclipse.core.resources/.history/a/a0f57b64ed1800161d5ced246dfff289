@@ -1,0 +1,77 @@
+package com.$520it_01;
+
+import java.io.File;
+import java.io.FileFilter;
+
+public class FileListDemo {
+	public static void main(String[] args) {
+		//遍历出所有的java文件
+		File file = new File("E:/");
+		//传人一个文件过滤器
+		File[] files = file.listFiles(/*new FileFilter() {
+			@Override
+			public boolean accept(File pathname) {
+				//传人的参数是当前的文件
+				//需求:只要java的文件
+				boolean b = pathname.getName().endsWith("java");
+				//返回值表示是否需要过滤,true表示不要过滤
+				return b;
+			}
+		}*/);
+		System.out.println("----------------");
+		for (File f : files) {
+			System.out.println(f.listFiles());
+		}
+	}
+
+	private static void work() {
+		//获取所有的根路径
+		File[] files = File.listRoots();
+		for (File f : files) {
+			System.out.println(f);
+		}
+		
+//		File file = new File("E:/逍遥/day01-走进java");
+		File file = new File("d:/");
+		//获取目录中所有的路径
+//		searchFiles(file);
+		
+		/*File[] files = file.listFiles();
+		for (File f : files) {
+			System.out.println(f);
+			if (f.isDirectory()) {
+				File[] listFiles = f.listFiles();
+				for (File f1 : listFiles) {
+					System.out.println(f1);
+					if (f.isDirectory()) {
+						File[] listFiles1 = f.listFiles();
+						for (File f2 : listFiles1) {
+							System.out.println(f2);
+						}
+					}
+				}
+			}
+		}
+		
+		String[] paths = file.list();
+		for (String path : paths) {
+			System.out.println(path);
+		}*/
+	}
+	
+	private static void searchFiles(File file) {
+		if (file.isDirectory()) {
+			File[] files = file.listFiles();
+			if (files != null) {
+				for (File f : files) {
+					//分情况
+					System.out.println(f);
+					if (f.isDirectory()) {
+						//重复上面的逻辑,这些逻辑不就是这个方法吗?
+						searchFiles(f);
+					}
+				}
+			}
+		}
+	} 
+}

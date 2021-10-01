@@ -1,0 +1,12 @@
+package com.$520it_03;
+
+public class UDPReceive {
+	public static void main(String[] args) {
+//		1：创建DatagramSocket对象
+//		2：创建一个数据包
+//		3：调用方法接收数据包
+//		4：解析数据包
+//		5：关闭资源（接收端一般不关闭）
+
+	}
+}

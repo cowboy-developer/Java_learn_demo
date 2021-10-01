@@ -1,0 +1,20 @@
+package com.$520it_04;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollsDemo {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(5);
+		list.add(15);
+		list.add(3);
+		list.add(8);
+		//打乱集合中元素的顺序
+//		Collections.shuffle(list);
+		//对集合中元素进行排序
+//		Collections.sort(list);//自然排序
+		System.out.println(list);
+ 	}
+}

@@ -1,0 +1,41 @@
+package com.$520it_05;
+
+import java.util.Arrays;
+
+public class App {
+	public static void main(String[] args) {
+/*//		boolean b = isTelNo(tel);
+		//匹配是否是手机号码
+		//判断一个字符串是否是手机号码
+		String tel = "1571111111";
+		//正则表达式用到了就熟悉
+//		读文档
+		String regex = "1[357]\\d{9}";
+		boolean b = tel.matches(regex);
+		System.out.println(b);
+		
+		String data = "gui;owlq;bnvh;iur";
+		String regex = ";";
+		String[] ss = data.split(regex);
+		System.out.println(Arrays.toString(ss));*/
+		
+		String info = "Xxx你个猪队友,你这个SB";
+	}
+
+	private static boolean isTelNo(String tel) {
+		//11位   1开头   都是数字   第二位是3/5/7
+		if (tel.length() != 11) {
+			return false;
+		}
+		if (!(tel.startsWith("13") || tel.startsWith("15") || tel.startsWith("17"))) {
+			return false;
+		}
+		char[] cs = tel.toCharArray();
+		for (char c : cs) {
+			if (c > '9' || c < '0') {
+				return false;
+			}
+		}
+		return true;
+	}
+}

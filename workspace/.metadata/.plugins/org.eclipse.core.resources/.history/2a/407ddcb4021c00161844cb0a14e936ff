@@ -1,0 +1,14 @@
+package com.$520it_04;
+
+import java.net.ServerSocket;
+
+public class TCPServer {
+	public static void main(String[] args) {
+//		1：创建ServerSocket对象
+		//参数是需要绑定的端口号
+		ServerSocket ss = new ServerSocket(10086);
+//		2：????
+//		3：获取输入流读取数据
+//		4：关闭资源（服务端一般不关闭）
+	}
+}

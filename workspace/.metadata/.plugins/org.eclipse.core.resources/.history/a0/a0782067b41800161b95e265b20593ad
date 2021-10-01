@@ -1,0 +1,7 @@
+package com.$520it_01;
+
+public class FileListDemo {
+	public static void main(String[] args) {
+		//获取目录中所有的路径
+	}
+}

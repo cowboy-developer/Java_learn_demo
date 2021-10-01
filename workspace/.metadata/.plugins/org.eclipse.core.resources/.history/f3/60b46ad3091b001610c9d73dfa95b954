@@ -1,0 +1,4 @@
+#\注释
+#key=value
+src=c:/setup.exe
+dest=c:/1.exe

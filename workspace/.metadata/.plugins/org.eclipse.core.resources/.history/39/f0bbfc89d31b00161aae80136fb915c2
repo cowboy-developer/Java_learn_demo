@@ -1,0 +1,11 @@
+package com.$520it_01;
+
+import java.net.InetAddress;
+
+public class InetAddressDemo {
+	public static void main(String[] args) {
+		//通过静态方法返回对象
+		//参数是主机名
+		InetAddress.getByName("");
+	}
+}

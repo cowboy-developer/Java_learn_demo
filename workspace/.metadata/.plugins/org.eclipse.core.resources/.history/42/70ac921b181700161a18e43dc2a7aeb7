@@ -1,0 +1,18 @@
+package com.$520it_01;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashSetDemo {
+	public static void main(String[] args) {
+		//创建对象
+		Set<String> set = new HashSet<>();
+		
+		//添加元素
+		set.add("A");
+		set.add("B");
+		set.add("C");
+		
+		System.out.println(set);
+	}
+}

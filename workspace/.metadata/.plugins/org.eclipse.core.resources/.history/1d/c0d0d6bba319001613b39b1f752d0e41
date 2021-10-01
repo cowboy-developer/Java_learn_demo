@@ -1,0 +1,8 @@
+package com.$520it_03;
+
+public class EncodeDecodeDemo {
+	public static void main(String[] args) {
+		//编码  把字符依靠编码表转换成字节
+		String s = "罗杰斯你很牛X";
+	}
+}

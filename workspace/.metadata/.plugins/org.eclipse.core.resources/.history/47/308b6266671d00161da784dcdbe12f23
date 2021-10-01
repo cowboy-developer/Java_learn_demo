@@ -1,0 +1,50 @@
+package com.$520it_01;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.LayoutManager;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class AddComDemo {
+	public static void main(String[] args) {
+		//创建一个窗体
+		JFrame frame = new JFrame("Android");
+		//设置窗体的位置和大小    设置在屏幕的正中间    500*300
+		//获取屏幕的大小
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		Dimension size = toolkit.getScreenSize();
+		int width = size.width;
+		int height = size.height;
+		int x = (width - 500) / 2;
+		int y = (height - 300) / 2;
+		
+		//前两个参数指的是屏幕的坐标,后两个是大小
+		frame.setBounds(x, y, 500, 300);
+		//设置默认的关闭动作
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		work1(frame);
+
+		//设置窗体可见
+		frame.setVisible(true);
+	}
+
+	private static void work1(JFrame frame) {
+		//创建一个边框布局
+		LayoutManager manager = new BorderLayout();
+		//设置布局管理器
+		frame.setLayout(manager);
+		
+		JButton btn = new JButton("东");
+		JButton btn = new JButton("南");
+		JButton btn = new JButton("西");
+		JButton btn = new JButton("北");
+		JButton btn = new JButton("中");
+		frame.add(btn);
+		frame.add(field);
+	}
+}

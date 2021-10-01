@@ -1,0 +1,29 @@
+package com.$520it_02;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class ObjectStreamDemo {
+	public static void main(String[] args) throws Exception {
+		//序列化
+		//使用对象的输出流
+		ObjectOutputStream out = new ObjectOutputStream(
+				new FileOutputStream("c:/1.txt"));
+		//写数据
+		//写出的内容不是给人看的,给机器看的
+		User u = new User("罗杰斯", 108);
+		out.writeObject(u);
+		//把内存中的对象写出到硬盘-->序列化
+		out.close();
+		
+		/*//反序列化
+		ObjectInputStream is = new ObjectInputStream(
+				new FileInputStream("c:/1.txt"));
+		//读取对象
+		Object obj = is.readObject();
+		System.out.println(obj);
+		is.close();*/
+	}
+}

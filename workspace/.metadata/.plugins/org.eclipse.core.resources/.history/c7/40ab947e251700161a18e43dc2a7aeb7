@@ -1,0 +1,29 @@
+package com.$520it_02;
+
+public class Person implements Comparable<Person> {
+	private String name;
+	private int age;
+	
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		/*
+		         返回值有3个含义
+		         正数  大于对象
+		         零      等于对象
+		         负数   小于对象
+		 */
+		//比较规则,按照年龄来比
+		return 0;
+	}
+}

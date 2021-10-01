@@ -1,0 +1,14 @@
+package com.$520it_05;
+
+public class App {
+	public static void main(String[] args) {
+		//判断一个字符串是否是手机号码
+		String tel = "";
+		boolean b = isTelNo(tel);
+	}
+
+	private static boolean isTelNo(String tel) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

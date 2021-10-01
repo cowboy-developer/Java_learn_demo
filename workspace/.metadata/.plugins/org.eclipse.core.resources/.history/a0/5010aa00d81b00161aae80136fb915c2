@@ -1,0 +1,17 @@
+package com.$520it_02;
+
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+
+public class NetCodeDemo {
+	public static void main(String[] args) throws Exception {
+		String info = "a黑 寡_妇";
+		
+		info = URLEncoder.encode(info, "utf-8");
+		System.out.println(info);
+		//字符串编码指的是编码成字节,网络编码指的编程其他网络能传输的字符串
+		
+		info = URLDecoder.decode(info, "gbk");
+		System.out.println(info);
+	}
+}

@@ -1,0 +1,39 @@
+package com.$520it_03;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class App {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class Receive implements Runnable {
+	private DatagramSocket ds;
+	
+	public Receive(DatagramSocket ds) {
+		super();
+		this.ds = ds;
+	}
+
+	@Override
+	public void run() {
+		try {
+			//数据包可以循环使用,不必每次都创建
+			DatagramPacket p = new DatagramPacket(new byte[1024], 1024);
+			while (true) {
+				ds.receive(p);
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	} 
+}
+
+class Send implements Runnable {
+	@Override
+	public void run() {
+		
+	}
+}

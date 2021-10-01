@@ -1,0 +1,34 @@
+package com.$520it_03;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GenericTypeDemo {
+	public static void main(String[] args) {
+		//?表示未知的类型
+//		List<?> list = new ArrayList<>();
+//		list.add("1");不能存任何数据,一般情况下?不单独使用
+		List<Number> l1 = null;
+		List<Integer> l2 = null;
+		//在泛型中是没有多态的概念的
+		work1(l2);
+ 	}
+	
+	private static void work1(List<? extends Number> list) {}
+
+	private static void work1() {
+		//集合只存String
+		List<String> list = new ArrayList<>();//菱形语法
+//		List list = new ArrayList();
+		list.add("123");
+		list.add("haha");
+		list.add("hehe");
+		list.add("黑寡妇");
+		System.out.println(list);
+		System.out.println(list.get(0).length());
+		
+		for (String s : list) {
+			System.out.println(s.length());
+		}
+	}
+}

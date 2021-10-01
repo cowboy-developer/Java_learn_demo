@@ -1,0 +1,35 @@
+package com.$520it_03;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+
+public class HashDemo {
+	public static void main(String[] args) {
+		/*//先演示哈希表
+		Hashtable<String, String> table = new Hashtable<>();
+		
+		table.put("罗杰斯", "美国队长");
+		table.put("托尼", "钢铁侠");
+		
+		//table里面有几个元素?这里指的是有都是映射关系
+		System.out.println(table.size());
+		//key=value {托尼=钢铁侠, 罗杰斯=美国队长}
+		System.out.println(table);*/
+		
+		Map<String, String> map = new HashMap<>();
+		map.put("罗杰斯", "美国队长");
+		map.put("托尼", "钢铁侠");
+		
+		//map里面有多少映射关系
+		System.out.println(map.size());
+		//key=value {托尼=钢铁侠, 罗杰斯=美国队长}
+//		System.out.println(map);
+		//我想知道托尼的角色名称 -->根据key->value
+		//根据key去Map中找value
+//		String value = map.get("罗杰斯");
+//		System.out.println(value);
+		boolean b = map.containsKey("罗杰斯");
+		System.out.println(b);
+	}
+}

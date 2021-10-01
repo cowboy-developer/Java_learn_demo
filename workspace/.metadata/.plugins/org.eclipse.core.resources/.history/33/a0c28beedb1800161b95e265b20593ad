@@ -1,0 +1,8 @@
+package com.$520it_02;
+
+public class FileOutputStreamDemo {
+	public static void main(String[] args) {
+		//写出去
+		//1:定义目标
+	}
+}

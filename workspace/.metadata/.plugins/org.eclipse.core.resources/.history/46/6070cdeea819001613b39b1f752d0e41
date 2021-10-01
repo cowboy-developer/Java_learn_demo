@@ -1,0 +1,7 @@
+package com.$520it_04;
+
+public class ChangeStream {
+	public static void main(String[] args) {
+		//把输出字节流转变成输出字符流
+	}
+}

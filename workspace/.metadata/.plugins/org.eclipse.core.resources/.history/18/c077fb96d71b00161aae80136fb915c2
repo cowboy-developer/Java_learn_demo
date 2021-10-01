@@ -1,0 +1,11 @@
+package com.$520it_02;
+
+import java.net.URLEncoder;
+
+public class NetCodeDemo {
+	public static void main(String[] args) {
+		String info = "ºÚ¹Ñ¸¾";
+		
+		URLEncoder.encode(info, "utf-8");
+	}
+}

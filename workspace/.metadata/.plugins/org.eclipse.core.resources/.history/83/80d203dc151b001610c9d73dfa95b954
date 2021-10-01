@@ -1,0 +1,24 @@
+package com;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Demo {
+	public static void main(String[] args) {
+		//统计一个字符串中每个字符出现的次数
+		//如:aabccc  -> a=2 b=1 c=3
+		String s = "vhwhfwbvasfqjh";
+		//Map 字符key 次数value
+		char[] cs = s.toCharArray();
+		
+		Map<Character, Integer> map = new HashMap<>();
+		//key存在->value+1  key不存在 value=1
+		for (char c : cs) {
+			if (map.containsKey(c)) {
+				//存在
+				Integer num = map.get(c);
+				map.put(c, num + 1)
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+package com.$520it_04;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class TCPServer {
+	public static void main(String[] args) throws Exception {
+//		1：创建ServerSocket对象
+		//参数是需要绑定的端口号
+		ServerSocket ss = new ServerSocket(10086);
+//		2：监听端口
+		Socket s = ss.accept();
+//		3：获取输入流读取数据
+		InputStream in = s.getInputStream();
+		byte[] buf = new byte[1024];
+		int len;
+		while ((len = in.read(buf)) != -1) {
+			System.out.println(new String(buf, 0, len));
+		}
+		//回应客户端我收到数据了
+		OutputStream out = s.getOutputStream();
+		out.write("ok".getBytes());
+		//告诉客户端数据发完了
+		s.shutdownOutput();
+		
+//		4：关闭资源（服务端一般不关闭）
+		ss.close();
+	}
+}

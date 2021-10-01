@@ -1,0 +1,11 @@
+package com.$520it_02;
+
+public class FileOutputStreamDemo {
+	public static void main(String[] args) {
+		//写出去
+		//1:定义目标
+		//2:创建输出流对象
+		//3:写操作
+		//4:关闭资源
+	}
+}

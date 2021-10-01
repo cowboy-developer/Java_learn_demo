@@ -1,0 +1,15 @@
+package com.$520it_03;
+
+import java.util.Arrays;
+
+public class EncodeDecodeDemo {
+	public static void main(String[] args) {
+		//编码  把字符依靠编码表转换成字节
+		String s = "罗杰斯你很牛X";
+		//使用默认的字符集编码
+		byte[] bs = s.getBytes();
+		System.out.println(bs.length);
+		//默认编码每个汉字2个字节
+		System.out.println(Arrays.toString(bs));
+	}
+}

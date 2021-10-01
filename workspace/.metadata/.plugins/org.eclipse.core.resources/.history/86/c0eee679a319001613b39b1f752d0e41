@@ -1,0 +1,8 @@
+package com.$520it_03;
+
+public class EncodeDecodeDemo {
+	public static void main(String[] args) {
+		//编码  把字符转换成字节
+		
+	}
+}

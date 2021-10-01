@@ -1,0 +1,7 @@
+package com;
+
+public class Demo {
+	public static void main(String[] args) {
+		//统计一个字符串中每个字符出现的次数
+	}
+}

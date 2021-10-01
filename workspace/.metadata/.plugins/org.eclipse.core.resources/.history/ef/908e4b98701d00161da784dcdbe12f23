@@ -1,0 +1,40 @@
+package com.$520it_01;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class App {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("拨号");
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		Dimension size = toolkit.getScreenSize();
+		int width = size.width;
+		int height = size.height;
+		int x = (width - 233) / 2;
+		int y = (height - 400) / 2;
+		frame.setBounds(x, y, 233, 400);
+		//创建垂直的盒子
+		Box box = Box.createVerticalBox();
+		//添加组件
+		add1(box);
+		
+		frame.add(box);
+		frame.setVisible(true);
+	}
+
+	private static void add1(Box box) {
+		Box horizontalBox = Box.createHorizontalBox();
+		
+		horizontalBox.add(new JButton("拨号"));
+		horizontalBox.add(new JButton("通话记录"));
+		horizontalBox.add(new JButton("通讯录"));
+		
+		box.add(horizontalBox);
+	}
+}

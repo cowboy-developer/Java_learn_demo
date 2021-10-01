@@ -1,0 +1,11 @@
+package com.$520it_02;
+
+public class FileInputStreamDemo {
+	public static void main(String[] args) {
+		//读进来
+//		1:定义源
+//		2:创建输入流对象
+//		3:读操作
+//		4:关闭资源
+	}
+}

@@ -1,0 +1,13 @@
+package com.$520it_04;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class TCPClient {
+	public static void main(String[] args) throws Exception, IOException {
+		//1:创建Socket对象
+		//参数1:目标的IP  参数2:端口号
+		Socket s = new Socket("", 10086);
+	}
+}

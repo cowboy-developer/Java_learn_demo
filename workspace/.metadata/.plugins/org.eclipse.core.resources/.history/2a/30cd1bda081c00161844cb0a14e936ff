@@ -1,0 +1,15 @@
+package com.$520it_04;
+
+import java.io.BufferedInputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class UploadServer {
+	public static void main(String[] args) throws Exception {
+		ServerSocket ss = new ServerSocket(10086);
+		Socket s = ss.accept();
+		
+		//使用效率高的缓冲流
+		BufferedInputStream in = new BufferedInputStream(s.getInputStream())
+	}
+}

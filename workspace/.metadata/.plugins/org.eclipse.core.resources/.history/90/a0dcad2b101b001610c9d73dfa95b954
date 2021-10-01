@@ -1,0 +1,12 @@
+package com.$520it_03;
+
+public class ByteArrayStreamDemo {
+	public static void main(String[] args) {
+		output();
+	}
+
+	private static void output() {
+		//字节数组输出流
+		String s1 = "数据1";
+	}
+}

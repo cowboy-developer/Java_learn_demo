@@ -1,0 +1,13 @@
+package com.$520it_01;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class ReaderDemo {
+	public static void main(String[] args) throws Exception {
+		InputStream is = new FileInputStream("c:/1.txt");
+		int i = is.read();
+		System.out.println((char)i);
+		is.close();
+	}
+}

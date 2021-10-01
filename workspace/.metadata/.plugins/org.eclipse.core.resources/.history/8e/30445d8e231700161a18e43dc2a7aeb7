@@ -1,0 +1,22 @@
+package com.$520it_02;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class TreeSetDemo {
+	public static void main(String[] args) {
+		Set<Person> set = new TreeSet<>();
+		
+		Person p1 = new Person("黑寡妇", 30);
+		Person p2 = new Person("罗杰斯", 130);
+		Person p3 = new Person("托尼", 35);
+		
+		/*Set<Integer> set = new TreeSet<>();
+		//红黑树使用的是对象的自然顺序.  小->大
+		set.add(10);
+		set.add(5);
+		set.add(7);*/
+		
+		System.out.println(set);
+	}
+}

@@ -1,0 +1,18 @@
+package com.$520it_01;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+public class WriterDemo {
+	public static void main(String[] args) throws Exception {
+		//写字符数据
+		Writer writer = new FileWriter("c:/1.txt");
+		//写操作
+		write(writer);
+	}
+
+	private static void write(Writer writer) {
+		//写数据
+		writer.write("我是大魔王");
+	}
+}

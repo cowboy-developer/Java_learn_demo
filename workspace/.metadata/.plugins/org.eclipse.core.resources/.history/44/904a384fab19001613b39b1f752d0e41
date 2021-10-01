@@ -1,0 +1,17 @@
+package com.$520it_05;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+public class BufferedStream {
+	public static void main(String[] args) {
+		byByteStream();
+	}
+
+	private static void byByteStream() {
+		//1:先有一个基本流
+		OutputStream out = new FileOutputStream("")
+	}
+	
+	
+}

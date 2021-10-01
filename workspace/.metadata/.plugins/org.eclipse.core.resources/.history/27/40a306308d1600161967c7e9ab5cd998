@@ -1,0 +1,27 @@
+package com.$520it_03;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GenericTypeDemo {
+	public static void main(String[] args) {
+		//?表示未知的类型
+		List<?> list = new ArrayList<>();
+	}
+
+	private static void work1() {
+		//集合只存String
+		List<String> list = new ArrayList<>();//菱形语法
+//		List list = new ArrayList();
+		list.add("123");
+		list.add("haha");
+		list.add("hehe");
+		list.add("黑寡妇");
+		System.out.println(list);
+		System.out.println(list.get(0).length());
+		
+		for (String s : list) {
+			System.out.println(s.length());
+		}
+	}
+}

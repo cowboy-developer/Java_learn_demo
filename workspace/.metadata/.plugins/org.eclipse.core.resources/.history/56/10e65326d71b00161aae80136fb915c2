@@ -1,0 +1,7 @@
+package com.$520it_02;
+
+public class NetCodeDemo {
+	public static void main(String[] args) {
+		String info = "ºÚ¹Ñ¸¾";
+	}
+}

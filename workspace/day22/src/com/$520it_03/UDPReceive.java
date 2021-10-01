@@ -1,0 +1,25 @@
+package com.$520it_03;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class UDPReceive {
+	public static void main(String[] args) throws Exception {
+//		1：创建DatagramSocket对象
+		DatagramSocket ds = new DatagramSocket(10086);
+//		2：创建一个数据包   参数1:缓冲字节数组  参数2:数组的长度
+		DatagramPacket p = new DatagramPacket(new byte[1024], 1024);
+//		3：调用方法接收数据包
+		ds.receive(p);//阻塞
+//		4：解析数据包
+//		获取IP
+		String ip = p.getAddress().getHostAddress();
+//		获取接收数据
+		byte[] buf = p.getData();
+		//获取接收的长度
+		int len = p.getLength();
+		System.out.println(String.format("%s-->%s", ip, new String(buf, 0, len)));
+//		5：关闭资源（接收端一般不关闭）
+		ds.close();
+	}
+}

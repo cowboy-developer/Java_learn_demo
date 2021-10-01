@@ -1,0 +1,99 @@
+package com.$520it_01;
+
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.TextField;
+import java.awt.Toolkit;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class App {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("拨号");
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+		Dimension size = toolkit.getScreenSize();
+		int width = size.width;
+		int height = size.height;
+		int x = (width - 235) / 2;
+		int y = (height - 400) / 2;
+		frame.setBounds(x, y, 235, 400);
+		//创建垂直的盒子
+		Box box = Box.createVerticalBox();
+		//添加组件
+		add1(box);
+		add2(box);
+		add3(box);
+		add4(box);
+		add5(box);
+		
+		frame.add(box);
+		frame.setVisible(true);
+	}
+
+	private static void add5(Box box) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void add4(Box box) {
+		JPanel panel = new JPanel(new GridLayout(4, 3));
+		
+		JButton bt0 = new JButton("0");
+		JButton bt1 = new JButton("1");
+		JButton bt2 = new JButton("2");
+		JButton bt3 = new JButton("3");
+		JButton bt4 = new JButton("4");
+		JButton bt5 = new JButton("5");
+		JButton bt6 = new JButton("6");
+		JButton bt7 = new JButton("7");
+		JButton bt8 = new JButton("8");
+		JButton bt9 = new JButton("9");
+		JButton bt10 = new JButton("*");
+		JButton bt11 = new JButton("#");
+		
+		panel.add(bt1);
+		panel.add(bt2);
+		panel.add(bt3);
+		panel.add(bt4);
+		panel.add(bt5);
+		panel.add(bt6);
+		panel.add(bt7);
+		panel.add(bt8);
+		panel.add(bt9);
+		panel.add(bt10);
+		panel.add(bt0);
+		panel.add(bt11);
+		
+		box.add(panel);
+	}
+
+	private static void add3(Box box) {
+		Box horizontalBox = Box.createHorizontalBox();
+		
+		horizontalBox.add(new JButton("收起"));
+		horizontalBox.add(new TextField());
+		horizontalBox.add(new JButton("删除"));
+		
+		box.add(horizontalBox);
+	}
+
+	private static void add2(Box box) {
+		box.add(new JTextArea());
+	}
+
+	private static void add1(Box box) {
+		Box horizontalBox = Box.createHorizontalBox();
+		
+		horizontalBox.add(new JButton("拨号"));
+		horizontalBox.add(new JButton("通话记录"));
+		horizontalBox.add(new JButton("通讯录"));
+		
+		box.add(horizontalBox);
+	}
+}

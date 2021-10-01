@@ -1,0 +1,11 @@
+package com.$520it_01;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class CopyFile {
+	public static void main(String[] args) throws Exception {
+		String src = "c:/1.java";//alt+shift+l
+		InputStream is = new FileInputStream(src);
+	}
+}

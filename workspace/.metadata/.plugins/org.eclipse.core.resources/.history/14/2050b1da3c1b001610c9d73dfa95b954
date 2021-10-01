@@ -1,0 +1,26 @@
+package com.$520it_05;
+
+public class App {
+	public static void main(String[] args) {
+		//判断一个字符串是否是手机号码
+		String tel = "";
+		boolean b = isTelNo(tel);
+	}
+
+	private static boolean isTelNo(String tel) {
+		//11位   1开头   都是数字   第二位是3/5/7
+		if (tel.length() != 11) {
+			return false;
+		}
+		if (!(tel.startsWith("13") || tel.startsWith("15") || tel.startsWith("17"))) {
+			return false;
+		}
+		char[] cs = tel.toCharArray();
+		for (char c : cs) {
+			if (c > '9' || c < '0') {
+				return false;
+			}
+		}
+		return true;
+	}
+}

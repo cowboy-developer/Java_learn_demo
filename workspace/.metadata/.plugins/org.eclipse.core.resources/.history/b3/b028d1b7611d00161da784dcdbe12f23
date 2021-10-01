@@ -1,0 +1,11 @@
+package com.$520it_01;
+
+import javax.swing.JFrame;
+
+public class JFrameDemo {
+	public static void main(String[] args) {
+		//创建一个窗体
+		JFrame frame = new JFrame("Android");
+		//设置窗体可见
+	}
+}

@@ -1,0 +1,17 @@
+package com.$520it_03;
+
+import java.net.DatagramSocket;
+
+public class UDPReceive {
+	public static void main(String[] args) throws Exception {
+//		1：创建DatagramSocket对象
+		DatagramSocket ds = new DatagramSocket();
+//		2：创建一个数据包
+//		DatagramPacket p = new DatagramPacket(buf, length)
+//		3：调用方法接收数据包
+		
+//		4：解析数据包
+//		5：关闭资源（接收端一般不关闭）
+		ds.close();
+	}
+}

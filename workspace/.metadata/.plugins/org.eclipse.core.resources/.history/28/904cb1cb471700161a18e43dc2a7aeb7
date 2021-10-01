@@ -1,0 +1,18 @@
+package com.$520it_03;
+
+import java.util.Hashtable;
+
+public class HashDemo {
+	public static void main(String[] args) {
+		//先演示哈希表
+		Hashtable<String, String> table = new Hashtable<>();
+		
+		table.put("罗杰斯", "美国队长");
+		table.put("托尼", "钢铁侠");
+		
+		//table里面有几个元素?
+		System.out.println(table.size());
+		//key=value {托尼=钢铁侠, 罗杰斯=美国队长}
+		System.out.println(table);
+	}
+}

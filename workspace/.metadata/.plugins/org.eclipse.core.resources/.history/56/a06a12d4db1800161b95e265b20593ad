@@ -1,0 +1,7 @@
+package com.$520it_02;
+
+public class FileOutputStreamDemo {
+	public static void main(String[] args) {
+		//Ð´³öÈ¥
+	}
+}

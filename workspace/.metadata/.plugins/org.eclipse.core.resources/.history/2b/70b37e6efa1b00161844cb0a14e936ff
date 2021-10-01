@@ -1,0 +1,46 @@
+package com.$520it_03;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class App {
+	public static void main(String[] args) throws Exception {
+		DatagramSocket ds = new DatagramSocket(10086);
+	}
+}
+
+class Receive implements Runnable {
+	private DatagramSocket ds;
+	
+	public Receive(DatagramSocket ds) {
+		super();
+		this.ds = ds;
+	}
+
+	@Override
+	public void run() {
+		try {
+			//数据包可以循环使用,不必每次都创建
+			DatagramPacket p = new DatagramPacket(new byte[1024], 1024);
+			while (true) {
+				ds.receive(p);
+				//解析数据包
+				byte[] data = p.getData();
+				int len = p.getLength();
+				String ip = p.getAddress().getHostAddress();
+				System.out.println(String.format("%s-->%s", 
+						ip, new String(data, 0, len)));
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	} 
+}
+
+class Send implements Runnable {
+	@Override
+	public void run() {
+		
+	}
+}
